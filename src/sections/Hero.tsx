@@ -12,8 +12,8 @@ const Hero = () => {
     useEffect(() => {
         const startCounting = () => {
             const targetMembers = 230;
-            const targetAwards = 50;
-            const targetRecognitions = 20;
+            const targetAwards = 30;
+            const targetRecognitions = 50;
 
             let memberCount = 0;
             let awardsCount = 0;
@@ -128,7 +128,7 @@ const Hero = () => {
                         </p>
                     </div>
                     <div className="text-center">
-                        <h2 className="text-2xl font-semibold text-[#7042f8]">Recognitions</h2>
+                        <h2 className="text-2xl font-semibold text-[#7042f8]">Events</h2>
                         <p className="text-lg font-light text-gray-300">
                             {recognitions}+
                         </p>
