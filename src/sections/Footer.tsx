@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -12,7 +13,13 @@ const Footer = () => {
                 <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm">
                     {/* Get In Touch Section */}
                     <div className="mb-8 md:mb-0">
-                        <img src="/IEEE_logo.png" alt="IEEE Logo" className="w-[120px] mb-4 mx-auto md:mx-0" />
+                        <Image
+                            src={require('../assets/logos/white_logo.png')}
+                            alt="IEEE Logo"
+                            width={120}
+                            height={120}
+                            className="mb-4 mx-auto md:mx-0"
+                        />
                         <h3 className="font-bold mb-2">Get In Touch</h3>
                         <p className="mb-2">Indira Gandhi Delhi Technical University for Women, New Church Rd, Opp. St James Church, Kashmere Gate, Delhi 110006</p>
                         <p className="mb-2">Phone: No.</p>
