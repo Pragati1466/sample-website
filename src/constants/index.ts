@@ -169,9 +169,6 @@ export const TEAM = [
 ];
 
 
-
-
-
 export const EVENTS = [
   {
     eventDate: "2024-09-11",
@@ -206,9 +203,6 @@ export const EVENTS = [
 ];
 
 
-
-
-
 export const FACULTY = [
   {
       facultyName: "",
@@ -239,7 +233,6 @@ export const CHAPTERS = [
 ];
 
 
-// src/constants/index.ts
 export const FAQDATA = [
   {
     question: "What benefits do I get as a student member of IEEE?",
@@ -279,6 +272,25 @@ export const FOOTERDATA = [
     ending: "Made with love ❤️ All rights reserved © 2024"
   }
 
+];
+
+export const AIM = [
+  {
+    heading: "Who Are We?",
+    description: "We are IEEE IGDTUW, the dynamic student branch of IEEE at Indira Gandhi Delhi Technical University for Women. As part of IEEE’s global mission, we’re dedicated to advancing technology for humanity under the prestigious Region 10 of the Delhi Section.",
+  },
+  {
+    heading: "What Drives Us?",
+    description: "At IEEE WIE IGDTUW, we empower young women to take the lead in technology. Our mission is to inspire the next generation to embrace technical roles with confidence and to leave a lasting, positive impact on society.",
+  },
+  {
+    heading: "Why We Do It?",
+    description: "We are driven by a commitment to push the boundaries of technology. By hosting engaging workshops, events, and hands-on activities, we ensure that our members stay ahead in the ever-evolving tech landscape, fostering innovation and learning.",
+  },
+  {
+    heading: "Our Journey",
+    description: "Since our inception as IEEE IGIT on 6th February 2004, we’ve grown from just 33 members to a thriving community of over 200 active changemakers. Our journey is a testament to the power of knowledge and collaboration.",
+  },
 ];
 
 
