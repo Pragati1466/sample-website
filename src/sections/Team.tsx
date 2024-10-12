@@ -21,7 +21,7 @@ const Team = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> {/* Adjusted gaps and column counts */}
                 {TEAM.map((member, index) => (
                     <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-lg transition duration-300 group" key={index}>
-                        <div className="relative w-40 h-40 mx-auto mt-4 rounded-full overflow-hidden border-2 border-purple-500 shadow-lg"> {/* Circle size and border */}
+                        <div className="relative w-40 h-40 mx-auto mt-4 rounded-full overflow-hidden border-2 border-purple-700 shadow-lg"> {/* Circle size and border */}
                             <Image
                                 src={member.memberPic} // Use Image component
                                 alt={member.name}
