@@ -1,13 +1,30 @@
 'use client';
 
 import React, { useState } from "react";
-import { FaLinkedin, FaTwitter, FaInstagram, FaBars } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaBars } from "react-icons/fa";
+import { SiX } from "react-icons/si"; // Importing the 'X' icon for Twitter replacement
 import Image from "next/image";
 
+// Social Media Links with hover colors
 const Socials = [
-    { name: "LinkedIn", icon: <FaLinkedin size={24} color="#ffffff" />, link: "https://www.linkedin.com/company/ieee-igdtuw/" },
-    { name: "Twitter", icon: <FaTwitter size={24} color="#ffffff" />, link: "https://x.com/ieeeigdtuw?t=a_Ruso2b8InVZgRsWA_JIQ&s=09" },
-    { name: "Instagram", icon: <FaInstagram size={24} color="#ffffff" />, link: "https://www.instagram.com/ieeeigdtuw/?igshid=MzRlODBiNWFlZA%3D%3D" },
+    {
+        name: "LinkedIn",
+        icon: <FaLinkedin size={24} color="#ffffff" />,
+        link: "https://www.linkedin.com/company/ieee-igdtuw/",
+        hoverColor: "#0077b5" // LinkedIn blue
+    },
+    {
+        name: "X",
+        icon: <SiX size={24} color="#ffffff" />,
+        link: "https://x.com/ieeeigdtuw?t=a_Ruso2b8InVZgRsWA_JIQ&s=09",
+        hoverColor: "#1DA1F2" // X (Twitter) blue
+    },
+    {
+        name: "Instagram",
+        icon: <FaInstagram size={24} color="#ffffff" />,
+        link: "https://www.instagram.com/ieeeigdtuw/?igshid=MzRlODBiNWFlZA%3D%3D",
+        hoverColor: "#E1306C" // Instagram pink
+    },
 ];
 
 const Navbar = () => {
@@ -36,7 +53,7 @@ const Navbar = () => {
 
                 {/* Links Section */}
                 <div className="hidden md:flex flex-grow items-center justify-center">
-                    <div className="flex items-center justify-between w-[600px] h-auto border border-[#7042f861] bg-[#0300145e] px-[20px] py-[10px] rounded-full text-gray-200">
+                    <div className="flex items-center justify-between w-[600px] h-auto border border-[rgba(112,66,248,0.38)] bg-[#0300145e] px-[20px] py-[10px] rounded-full text-gray-200">
                         <a
                             href="#about-me"
                             className="cursor-pointer transition-all duration-300 hover:text-[#a855f7]"
@@ -72,9 +89,15 @@ const Navbar = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             key={social.name}
-                            className="cursor-pointer transition-all duration-300 hover:text-[#a855f7]"
+                            className="cursor-pointer transition-all duration-300"
+                            style={{ color: social.hoverColor }}
                         >
-                            {social.icon}
+                            <span
+                                className="transition-all duration-300"
+                                style={{ color: social.hoverColor }}
+                            >
+                                {social.icon}
+                            </span>
                         </a>
                     ))}
                 </div>
@@ -130,9 +153,12 @@ const Navbar = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 key={social.name}
-                                className="cursor-pointer transition-all duration-300 hover:text-[#a855f7]"
+                                className="cursor-pointer transition-all duration-300"
+                                style={{ color: social.hoverColor }}
                             >
-                                {social.icon}
+                                <span className="transition-all duration-300" style={{ color: social.hoverColor }}>
+                                    {social.icon}
+                                </span>
                             </a>
                         ))}
                     </div>
