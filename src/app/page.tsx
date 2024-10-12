@@ -7,6 +7,7 @@ import PhotoSlider from '@/sections/PhotoSlider';
 import AboutSb from '@/sections/AboutSb';
 import Team from '@/sections/Team';
 import AimAndMission from '@/sections/AimAndMission';
+import Events from '@/sections/Events';
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
       <Hero />
       <PhotoSlider />
       <AboutSb />
-      <AimAndMission/>
+      <AimAndMission />
+      <Events/>
       <Team/>
       <Faq/>
       <Footer />

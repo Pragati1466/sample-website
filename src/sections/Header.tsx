@@ -105,7 +105,7 @@ const Navbar = () => {
                 {/* Hamburger Menu Icon - Mobile Only */}
                 <div className="flex md:hidden">
                     <div
-                        className="p-2 rounded-md border-2 border-[#7042f8] hover:border-[#a855f7] transition-all duration-300 cursor-pointer"
+                        className="p-2 rounded-md border-2 border-[rgb(112,66,248)] hover:border-[#a855f7] transition-all duration-300 cursor-pointer"
                         onClick={toggleMenu}
                     >
                         <FaBars size={28} className="text-white transition-all duration-300 hover:text-[#a855f7]" />

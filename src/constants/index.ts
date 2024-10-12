@@ -23,7 +23,16 @@ import divyaVerma from "@/assets/teamPic/content_divya.jpeg"; // Add this line f
 import mahakSahu from "@/assets/teamPic/web_mahak.jpg"; // Add this line for Mahak's image
 import manviUpadhyay from "@/assets/teamPic/web_manvi.jpeg"; // Add this line for Manvi's image
 import pooja from "@/assets/teamPic/media_pooja.jpg"; // Add this line for Pooja's image
-import jhanviMadan from "@/assets/teamPic/membership_jhanvi.jpg"; // Add this line for Jhanvi's image
+import jhanviMadan from "@/assets/teamPic/membership_jhanvi.jpg";
+
+import random1 from "@/assets/sliderPhotos/random_1.jpg";
+import random2 from "@/assets/sliderPhotos/random_2.jpg";
+import random3 from "@/assets/sliderPhotos/random_3.jpg";
+import random4 from "@/assets/sliderPhotos/random_4.jpg";
+import random5 from "@/assets/sliderPhotos/random_5.jpg";
+
+import ieeeLogo from "@/assets/logos/white_logo.png"
+import wieLogo from "@/assets/logos/wieLogo.png"
 
 export const TEAM = [
   {
@@ -172,31 +181,41 @@ export const TEAM = [
 export const EVENTS = [
   {
     eventDate: "2024-09-11",
-    eventImage: "",
+    eventImage1: random1,
+    eventImage2: random1,
+    eventImage3: random1,
     eventName: "Aisha Bowe: From NASA to CEO - Inspiring Women in Tech",
     eventDescription: "On September 11th, 2024, IEEE IGDTUW had the honor of hosting Aisha Bowe, a former NASA rocket scientist, entrepreneur, and CEO of STEMBoard. As the first Black woman to break barriers in space tech, Aisha shared her journey, inspiring women to pursue careers in technology. Her story of determination and leadership left the audience empowered to reach for the stars."
 },
 {
   eventDate: "2024-02-08",
-  eventImage: "",
+  eventImage1: random2,
+  eventImage2: random2,
+  eventImage3: random2,
   eventName: "Quadcopter: The Drone Workshop",
   eventDescription: "On February 8th-9th, 2024, IEEE IGDTUW successfully conducted the 'Quadcopter: The Drone Workshop,' where participants delved into the exciting world of drone technology. Attendees assembled and piloted drones, gaining hands-on experience and insights into aerial innovation, making it a memorable event for all tech enthusiasts."
 },
 {
     eventDate: "2024-10-01",
-    eventImage: "",
+    eventImage1: random3,
+    eventImage2: random3,
+    eventImage3: random3,
     eventName: "Harkirat Singh: Navigating the World of Open Source",
     eventDescription: "On October 1st, 2024, IEEE IGDTUW welcomed Harkirat Singh, an open-source enthusiast and IIT Roorkee graduate, to share his experiences. A software engineer who has worked at FAANG, finance, and startup companies, Harkirat captivated the audience with his unique journey in the world of coding. His session provided valuable insights into open-source projects and career growth."
 },
 {
   eventDate: "2024-02-12",
-  eventImage: "",
+  eventImage1: random4,
+  eventImage2: random4,
+  eventImage3: random4,
   eventName: "Nishant Chahar: Crafting a Successful Career Path",
   eventDescription: "On February 12th, 2024, IEEE IGDTUW hosted an enlightening session with Nishant Chahar, a Microsoft software engineer and founder of AlgoPrep. With a proven track record of mentoring over 300K students, Nishant shared invaluable career-building strategies and insights from his journey, inspiring attendees to pursue their paths with confidence and determination."
 },
 {
   eventDate: "2024-02-05 to 2024-02-12",
-  eventImage: "",
+  eventImage1: random5,
+  eventImage2: random5,
+  eventImage3: random5,
   eventName: "WIEmpower 5.0: Women in Tech Leadership",
   eventDescription: "WIEmpower 5.0, held from February 5th to 12th, 2024, was a transformative event bringing together women leaders in technology. The event featured interactive sessions, live demos, and opportunities for women professionals and students to connect and collaborate, empowering the next generation of innovators."
 }
@@ -219,7 +238,7 @@ export const ABOUTSB = [
   {
       sbMission: '"To foster innovation and technical excellence among young engineers, promoting socially responsible advancements that contribute to a globally competitive India."',
       sbDetails: "IEEE IGDTUW began its inspiring journey as IEEE IGIT, inaugurated on February 6, 2004, with just 33 members. Now, the student branch has grown to over 200 active members, offering a vibrant community for aspiring women engineers. IEEE IGDTUW provides a wide range of platforms that allow students to host and participate in engaging technical and non-technical events, as well as national and international conferences.Our mission is to instill technical expertise, leadership, and confidence in students through a variety of year-round events such as IEEE Week, IEEE Day Celebrations, and Student Interest Groups (SIGs), helping them excel both academically and professionally.We are committed to offering the best opportunities to our members, continually inspiring and empowering students to become exceptional engineers and professionals.",
-      sbImage: "",
+      sbImage: ieeeLogo,
   }
 
 ];
@@ -228,7 +247,7 @@ export const CHAPTERS = [
   {
       chapterName: "WIE IGDTUW",
       chapterDetails: 'At IEEE WIE IGDTUW, we aim to inspire young girls to pursue technical roles and become confident leaders, leaving a positive impact on society. Throughout the year, we work tirelessly through various initiatives to achieve this goal, empowering the next generation of women engineers.A proud recipient of the prestigious Darrel Chong Award (Gold, 2016-17), IEEE WIE IGDTUW is recognized for its "Sparsh Outreach Program." Through Sparsh, volunteers regularly visit the Kilkari orphanage to mentor and inspire the girls, sharing experiences that go beyond academics. These meaningful connections help build growth, confidence, and inspiration on both sides, and we are committed to continuing such impactful efforts in the future.',
-      chapterLogo: "",
+      chapterLogo: wieLogo,
   }
 ];
 
