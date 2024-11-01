@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
-import { FAQDATA } from "../constants"; // Import the FAQ data from the constant file
+import React, { useState, useRef } from "react";
+import { FAQDATA } from "../constants";
 
 export default function Faq() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const contentRefs = useRef<Array<HTMLDivElement | null>>([]);
 
     const toggleFAQ = (index: number) => {
-        setOpenIndex(openIndex === index ? null : index); // Toggle the opened FAQ
+        setOpenIndex(openIndex === index ? null : index);
     };
 
     return (
@@ -30,21 +31,28 @@ export default function Faq() {
                                 <h3 className="text-lg font-semibold text-white">
                                     {faq.question}
                                 </h3>
-                                <span className="text-[#969292] text-xl">
-                                    {openIndex === index ? "-" : "+"}
+                                <span
+                                    className={`text-[#969292] text-xl transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : 'rotate-0'
+                                        }`}
+                                >
+                                    ▼
                                 </span>
                             </div>
 
-                            {/* Add a clear separation between the question and answer */}
                             <div
-                                className={`transition-all duration-500 ease-in-out ${openIndex === index
-                                        ? "max-h-[1000px] p-5"
-                                        : "max-h-0 p-0"
-                                    } overflow-hidden bg-[#000000]`}
+                                ref={(el) => {
+                                    contentRefs.current[index] = el;
+                                }}
+                                className={`transition-all duration-500 ease-in-out overflow-hidden bg-[#000000]`}
+                                style={{
+                                    maxHeight: openIndex === index ? `${contentRefs.current[index]?.scrollHeight}px` : '0',
+                                    opacity: openIndex === index ? 1 : 0,
+                                    transform: `translate3d(0, ${openIndex === index ? '0' : '-10px'}, 0)`,
+                                }}
                             >
-                                {openIndex === index && (
+                                <div className="p-5">
                                     <p className="text-[#d1d1d1]">{faq.answer}</p>
-                                )}
+                                </div>
                             </div>
                         </div>
                     ))}

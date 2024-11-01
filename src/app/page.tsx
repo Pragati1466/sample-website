@@ -21,8 +21,6 @@ const Home = () => {
       <Team/>
       <Faq/>
       <Footer />
-
-      
     </>
   );
 };
