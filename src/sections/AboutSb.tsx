@@ -8,7 +8,7 @@ import { ABOUTSB, CHAPTERS } from '@/constants';
 
 const AboutSb = () => {
     return (
-        <section className='py-20 md:py-24 min-h-screen flex items-center'>
+        <section id="about" className='py-20 md:py-24 min-h-screen flex items-center'>
             <div className='container'>
                 <div
                     className='border border-white/15 py-24 rounded-xl overflow-hidden relative '

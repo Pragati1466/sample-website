@@ -59,7 +59,7 @@ const Events: React.FC = () => {
   };
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen text-white overflow-hidden py-20">
+    <section id="past-events" className="relative flex flex-col items-center justify-center min-h-screen text-white overflow-hidden py-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(112,66,248,0.1)_0%,transparent_70%)] opacity-10"></div>
       <h2 className="text-3xl font-bold mb-12 text-white z-10">Our Past Events</h2>
       <div className="w-full max-w-6xl px-4 z-10">

@@ -14,7 +14,7 @@ const Team = () => {
     console.log(TEAM);
 
     return (
-        <div className="max-w-5xl mx-auto p-8 rounded-lg bg-transparent shadow-md">
+        <div id="team" className="max-w-5xl mx-auto p-8 rounded-lg bg-transparent shadow-md">
             <h2 className="text-3xl font-bold text-center mb-6">Meet Our Team</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {TEAM.map((member, index) => (
