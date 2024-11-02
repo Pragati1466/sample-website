@@ -3,7 +3,7 @@ import Footer from '@/sections/Footer';
 
 const IeeeWeek24 = () => {
     return (
-        <div>
+        <div id='ieeeWeek24'>
             <Navbar />
             <div className="flex items-center justify-center h-screen bg-[#030014] text-white">
                 <h1 className="text-4xl font-bold">Welcome to IEEE Week 2024!</h1>

@@ -1,10 +1,10 @@
 'use client';
-
+import Link from 'next/link';
 import React, { useState, useEffect } from "react";
 import { FaLinkedin, FaInstagram, FaBars, FaEnvelope } from "react-icons/fa";
 import { SiX } from "react-icons/si";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, Events, scrollSpy, scroller } from "react-scroll";
+import {Events, scrollSpy, scroller } from "react-scroll";
 import Image from "next/image";
 
 const iconSize = 24;
@@ -201,8 +201,8 @@ const Navbar = () => {
                         </div>
 
                         <div
-                            onClick={() => handleCustomScroll('IeeeWeek24')}
-                            className={navLinkClass('projects')}
+                            onClick={() => handleCustomScroll('ieeeWeek24')}
+                            className={navLinkClass('ieeeWeek24')}
                         >
                             IEEE Week
                         </div>
@@ -231,15 +231,16 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                {/* Mobile Menu Button */}
+                {/* Mobile Menu Button (Hamburger) */}
                 <div
                     onClick={toggleMenu}
-                    className="flex md:hidden flex-col justify-center items-center cursor-pointer"
+                    className={`md:hidden rounded-md p-2 transition-all duration-300 ${isMenuOpen ? 'bg-black/50' : 'bg-black/25'
+                        }`}
                 >
                     {isMenuOpen ? (
-                        <SiX size={30} color="white" />
+                        <SiX size={30} color="#ffffff" />
                     ) : (
-                        <FaBars size={30} color="white" />
+                        <FaBars size={30} color="#ffffff" />
                     )}
                 </div>
             </div>
@@ -248,31 +249,63 @@ const Navbar = () => {
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -50 }}
+                        initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -50 }}
-                        transition={{ duration: 0.3 }}
-                        className="absolute top-12 left-0 w-full bg-[#0300147f] backdrop-blur-md rounded-b-lg p-5"
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="md:hidden absolute left-0 right-0 top-[65px] bg-[#030014] border border-[rgba(112,66,248,0.38)] rounded-md shadow-lg p-4 z-50"
                     >
                         <div className="flex flex-col gap-4">
-                            <div onClick={() => handleCustomScroll('about')} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">About</div>
-                            <div onClick={toggleSubBar} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">Events</div>
+                            <div onClick={() => handleCustomScroll('about')} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">
+                                About
+                            </div>
+                            <div onClick={toggleSubBar} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">
+                                Events
+                            </div>
                             {isSubBarOpen && (
-                                <div className="flex flex-col pl-5">
-                                    <div onClick={() => {
-                                        handleCustomScroll('Wiempower-2024');
-                                        setIsSubBarOpen(false);
-                                    }} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">WIEmpower 2024</div>
-                                    <div onClick={() => {
-                                        handleCustomScroll('past-events');
-                                        setIsSubBarOpen(false);
-                                    }} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">Past Events</div>
+                                <div className="flex flex-col pl-4">
+                                    <div
+                                        onClick={() => {
+                                            handleCustomScroll('Wiempower-2024');
+                                            setIsSubBarOpen(false);
+                                        }}
+                                        className="text-gray-200 cursor-pointer hover:text-[#a855f7]"
+                                    >
+                                        WIEmpower 2024
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            handleCustomScroll('past-events');
+                                            setIsSubBarOpen(false);
+                                        }}
+                                        className="text-gray-200 cursor-pointer hover:text-[#a855f7]"
+                                    >
+                                        Past Events
+                                    </div>
                                 </div>
                             )}
-                            <div onClick={() => handleCustomScroll('team')} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">Team</div>
-
-                            <div onClick={() => handleCustomScroll('IeeeWeek24')} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">IEEE Week</div>
-                            <div onClick={() => handleCustomScroll('contact-us')} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">Contact</div>
+                            <div onClick={() => handleCustomScroll('team')} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">
+                                Team
+                            </div>
+                            <div onClick={() => handleCustomScroll('IeeeWeek24')} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">
+                                IEEE Week
+                            </div>
+                            <div onClick={() => handleCustomScroll('contact-us')} className="text-gray-200 cursor-pointer hover:text-[#a855f7]">
+                                Contact
+                            </div>
+                            <div className="flex flex-row gap-5 items-center justify-center mt-4">
+                                {Socials.map((social) => (
+                                    <a
+                                        href={social.name === "Email" ? "#" : social.link}
+                                        target={social.name === "Email" ? "_self" : "_blank"}
+                                        rel="noopener noreferrer"
+                                        key={social.name}
+                                        className="flex items-center justify-center text-gray-200 hover:text-gray-300"
+                                    >
+                                        {social.icon}
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </motion.div>
                 )}
