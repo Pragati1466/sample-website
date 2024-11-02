@@ -1,9 +1,8 @@
-import Image from 'next/image'; // Import Image from Next.js
+import Image from 'next/image';
 import React from 'react';
-import { TEAM } from '../constants'; // Adjust the import path according to your folder structure
+import { TEAM } from '../constants';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-// Helper function to format names
 const formatName = (name: string): string => {
     const parts = name.split(' ');
     return parts.map((part: string) => {
@@ -11,9 +10,8 @@ const formatName = (name: string): string => {
     }).join(' ');
 };
 
-// Team component with TeamMember functionality
 const Team = () => {
-    console.log(TEAM); // Log TEAM to check if it’s imported correctly
+    console.log(TEAM);
 
     return (
         <div className="max-w-5xl mx-auto p-8 rounded-lg bg-transparent shadow-md">
@@ -43,7 +41,7 @@ const Team = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute inset-x-0 flex items-center justify-center text-white mt-[8%]"> {/* Adjusted margin-top for centering */}
+                        <div className="absolute inset-x-0 flex items-center justify-center text-white mt-[8%]"> 
                             <div className="text-center">
                                 <h3 className="text-lg font-semibold">{formatName(member.name)}</h3>
                                 <p className="mb-2">{member.role}</p>

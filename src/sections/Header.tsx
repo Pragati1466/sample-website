@@ -36,14 +36,14 @@ const Socials = [
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isSubBarOpen, setIsSubBarOpen] = useState(false); // Track sub-bar visibility
+    const [isSubBarOpen, setIsSubBarOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     const toggleSubBar = () => {
-        setIsSubBarOpen(!isSubBarOpen); // Toggle sub-bar visibility
+        setIsSubBarOpen(!isSubBarOpen);
     };
 
     const handleEmailClick = (e: { preventDefault: () => void; }) => {
