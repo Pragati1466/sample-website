@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaInstagram, FaBars, FaEnvelope } from "react-icons/fa";
 import { SiX } from "react-icons/si";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const iconSize = 24;
@@ -74,27 +75,35 @@ const Navbar = () => {
                         <a href="#about-me" className="cursor-pointer transition-all duration-300 hover:text-[#a855f7]">About</a>
 
                         <div className="relative">
-                            <a
-                                href="#events"
-                                className="cursor-pointer transition-all duration-300 hover:text-[#a855f7]"
+                            <button
                                 onClick={(e) => { e.preventDefault(); toggleSubBar(); }}
+                                className="cursor-pointer transition-all duration-300 hover:text-[#a855f7]"
                             >
                                 Events
-                            </a>
-                            {isSubBarOpen && (
-                                <div className="absolute left-0 mt-2 w-48 bg-[#0300145e] border border-[rgba(112,66,248,0.38)] rounded-lg shadow-lg text-gray-200">
-                                    <a
-                                        href="https://ieee-igdtuw.github.io/Wiempower-5.0/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="block px-4 py-2 transition-all duration-300 hover:bg-[#a855f7] hover:text-white"
+                            </button>
+                            <AnimatePresence>
+                                {isSubBarOpen && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -10 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="absolute left-0 mt-2 w-48 bg-[#0300145e] border border-[rgba(112,66,248,0.38)] rounded-lg shadow-lg text-gray-200 overflow-hidden"
                                     >
-                                        IEEE Week 2024
-                                    </a>
-
-                                    <a href="#past-events" className="block px-4 py-2 transition-all duration-300 hover:bg-[#a855f7] hover:text-white">Past Events</a>
-                                </div>
-                            )}
+                                        <a
+                                            href="https://ieee-igdtuw.github.io/Wiempower-5.0/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="block px-4 py-2 transition-all duration-300 hover:bg-[#a855f7] hover:text-white"
+                                        >
+                                            IEEE Week 2024
+                                        </a>
+                                        <a href="#past-events" className="block px-4 py-2 transition-all duration-300 hover:bg-[#a855f7] hover:text-white">
+                                            Past Events
+                                        </a>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
 
                         <a href="#team" className="cursor-pointer transition-all duration-300 hover:text-[#a855f7]">Team</a>
@@ -140,12 +149,20 @@ const Navbar = () => {
                     >
                         Events
                     </a>
-                    {isSubBarOpen && (
-                        <div className="w-full flex flex-col items-center mt-2 space-y-2">
-                            <a href="#ieee-week-2024" className="text-lg transition-all duration-300 hover:text-[#a855f7]">IEEE Week 2024</a>
-                            <a href="#past-events" className="text-lg transition-all duration-300 hover:text-[#a855f7]">Past Events</a>
-                        </div>
-                    )}
+                    <AnimatePresence>
+                        {isSubBarOpen && (
+                            <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.3 }}
+                                className="w-full flex flex-col items-center mt-2 space-y-2"
+                            >
+                                <a href="#ieee-week-2024" className="text-lg transition-all duration-300 hover:text-[#a855f7]">IEEE Week 2024</a>
+                                <a href="#past-events" className="text-lg transition-all duration-300 hover:text-[#a855f7]">Past Events</a>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                     <a href="#team" className="cursor-pointer text-lg transition-all duration-300 hover:text-[#a855f7]" onClick={toggleMenu}>Team</a>
                     <a href="#contact-us" className="cursor-pointer text-lg transition-all duration-300 hover:text-[#a855f7]" onClick={toggleMenu}>Contact Us</a>
 
