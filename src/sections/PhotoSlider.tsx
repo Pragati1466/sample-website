@@ -1,10 +1,11 @@
 'use client';
-import React, { useEffect } from 'react';
+
+import React from 'react';
 import Image from 'next/image';
 import photo1 from "@/assets/sliderPhotos/random_1.jpg";
 import photo2 from "@/assets/sliderPhotos/random_2.jpg";
 import photo3 from "@/assets/sliderPhotos/random_3.jpg";
-import photo4 from "@/assets/sliderPhotos/random_4.jpg";
+import photo4 from "@/assets/sliderPhotos/random_4.png";
 import photo5 from "@/assets/sliderPhotos/random_5.jpg";
 import photo6 from "@/assets/sliderPhotos/random_6.jpg";
 import { motion } from 'framer-motion';
@@ -16,7 +17,7 @@ const PhotoSlider = () => {
     return (
         <section className='py-20 md:py-24'>
             <div className='relative container'>
-                <div className='flex flex-1 overflow-hidden rounded-2xl relative'>
+                <div className='flex flex-1 overflow-hidden rounded-3xl relative'>
                     {/* Gradient overlays for slider edges */}
                     <div className='absolute inset-y-0 left-0 w-1/3 -ml-10 bg-gradient-to-r from-[#7042f861] to-transparent z-20 pointer-events-none'></div>
                     <div className='absolute inset-y-0 right-0 w-1/3 -mr-10 bg-gradient-to-l from-[#7042f861] to-transparent z-20 pointer-events-none'></div>
@@ -31,18 +32,18 @@ const PhotoSlider = () => {
                             duration: 40,                    // Duration of slide
                             ease: "linear"                   // Smooth linear slide
                         }}
-                        className='flex flex-none gap-10'
+                        className='flex flex-none gap-8 md:gap-12' // Reduced gap for better spacing
                     >
                         {/* Render the images twice for continuous loop */}
                         {[...photos, ...photos].map((photo, index) => (
-                            <div key={index} className="relative">
-                                <div className="absolute inset-0 bg-black opacity-30 z-10 rounded-2xl"></div>
+                            <div key={index} className="slider-image-container">
+                                <div className="absolute inset-0 bg-black opacity-30 z-10 rounded-3xl"></div>
                                 <Image
                                     src={photo}
                                     alt={`Slider image ${index + 1}`}
-                                    width={280}
-                                    height={160}
-                                    className='object-cover rounded-2xl'
+                                    width={340} // Increased width
+                                    height={200} // Increased height
+                                    className='object-cover rounded-3xl'
                                     unoptimized
                                 />
                             </div>
@@ -55,3 +56,12 @@ const PhotoSlider = () => {
 };
 
 export default PhotoSlider;
+
+
+
+
+
+
+
+
+
