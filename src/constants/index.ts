@@ -28,8 +28,18 @@ import jhanviMadan from "@/assets/teamPic/membership_jhanvi.jpg";
 import random1 from "@/assets/sliderPhotos/random_1.jpg";
 import random2 from "@/assets/sliderPhotos/random_2.jpg";
 import random3 from "@/assets/sliderPhotos/random_3.jpg";
-import random4 from "@/assets/sliderPhotos/random_4.jpg";
+import random4 from "@/assets/sliderPhotos/random_4.png";
 import random5 from "@/assets/sliderPhotos/random_5.jpg";
+import random7 from "@/assets/sliderPhotos/event1_img2.jpg";
+import random8 from "@/assets/sliderPhotos/event1_img3.jpg";
+import random9 from "@/assets/sliderPhotos/event2_img2.jpg";
+import random10 from "@/assets/sliderPhotos/event2_img3.jpg";
+import random11 from "@/assets/sliderPhotos/event3_img2.jpg";
+import random12 from "@/assets/sliderPhotos/event3_img3.jpg";
+import random13 from "@/assets/sliderPhotos/event4_img2.jpg";
+import random14 from "@/assets/sliderPhotos/event4_img3.jpg";
+import random15 from "@/assets/sliderPhotos/event5_img2.jpg";
+import random16 from "@/assets/sliderPhotos/event5_img3.jpg";
 
 import ieeeLogo from "@/assets/logos/white_logo.png"
 import wieLogo from "@/assets/logos/wieLogo.png"
@@ -182,40 +192,40 @@ export const EVENTS = [
   {
     eventDate: "2024-09-11",
     eventImage1: random1,
-    eventImage2: random1,
-    eventImage3: random1,
+    eventImage2: random8,
+    eventImage3: random7,
     eventName: "Aisha Bowe: From NASA to CEO - Inspiring Women in Tech",
     eventDescription: "On September 11th, 2024, IEEE IGDTUW had the honor of hosting Aisha Bowe, a former NASA rocket scientist, entrepreneur, and CEO of STEMBoard. As the first Black woman to break barriers in space tech, Aisha shared her journey, inspiring women to pursue careers in technology. Her story of determination and leadership left the audience empowered to reach for the stars."
 },
 {
   eventDate: "2024-02-08",
   eventImage1: random2,
-  eventImage2: random2,
-  eventImage3: random2,
+  eventImage2: random9,
+  eventImage3: random10,
   eventName: "Quadcopter: The Drone Workshop",
   eventDescription: "On February 8th-9th, 2024, IEEE IGDTUW successfully conducted the 'Quadcopter: The Drone Workshop,' where participants delved into the exciting world of drone technology. Attendees assembled and piloted drones, gaining hands-on experience and insights into aerial innovation, making it a memorable event for all tech enthusiasts."
 },
 {
     eventDate: "2024-10-01",
     eventImage1: random3,
-    eventImage2: random3,
-    eventImage3: random3,
+    eventImage2: random11,
+    eventImage3: random12,
     eventName: "Harkirat Singh: Navigating the World of Open Source",
     eventDescription: "On October 1st, 2024, IEEE IGDTUW welcomed Harkirat Singh, an open-source enthusiast and IIT Roorkee graduate, to share his experiences. A software engineer who has worked at FAANG, finance, and startup companies, Harkirat captivated the audience with his unique journey in the world of coding. His session provided valuable insights into open-source projects and career growth."
 },
 {
   eventDate: "2024-02-12",
   eventImage1: random4,
-  eventImage2: random4,
-  eventImage3: random4,
+  eventImage2: random13,
+  eventImage3: random14,
   eventName: "Nishant Chahar: Crafting a Successful Career Path",
   eventDescription: "On February 12th, 2024, IEEE IGDTUW hosted an enlightening session with Nishant Chahar, a Microsoft software engineer and founder of AlgoPrep. With a proven track record of mentoring over 300K students, Nishant shared invaluable career-building strategies and insights from his journey, inspiring attendees to pursue their paths with confidence and determination."
 },
 {
   eventDate: "2024-02-05 to 2024-02-12",
   eventImage1: random5,
-  eventImage2: random5,
-  eventImage3: random5,
+  eventImage2: random15,
+  eventImage3: random16,
   eventName: "WIEmpower 5.0: Women in Tech Leadership",
   eventDescription: "WIEmpower 5.0, held from February 5th to 12th, 2024, was a transformative event bringing together women leaders in technology. The event featured interactive sessions, live demos, and opportunities for women professionals and students to connect and collaborate, empowering the next generation of innovators."
 }
