@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {Events, scrollSpy, scroller } from "react-scroll";
 import Image from "next/image";
 
+
 const iconSize = 24;
 
 const Socials = [
@@ -69,7 +70,7 @@ const Navbar = () => {
         scrollSpy.update();
         Events.scrollEvent.register('begin', (to, element) => { });
         Events.scrollEvent.register('end', (to, element) => { });
-
+       
         let timeoutId: string | number | NodeJS.Timeout | undefined;
         const handleScroll = () => {
             if (timeoutId) {
@@ -107,6 +108,7 @@ const Navbar = () => {
                 clearTimeout(timeoutId);
             }
         };
+        
     }, []);
 
     const toggleMenu = () => {
@@ -126,7 +128,9 @@ const Navbar = () => {
     `;
 
     return (
+
         <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
+             
             <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
                 <div
                     onClick={() => handleCustomScroll('about')}

@@ -1,24 +1,27 @@
+'use client';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
-import React from 'react';
-import { TEAM } from '../constants';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { TEAM } from '../constants';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const formatName = (name: string): string => {
+const formatName = (name: string) => {
     const parts = name.split(' ');
-    return parts.map((part: string) => {
-        return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
-    }).join(' ');
+    return parts.map((part: string) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()).join(' ');
 };
 
 const Team = () => {
-    console.log(TEAM);
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Initialize AOS
+    }, []);
 
     return (
         <div id="team" className="max-w-5xl mx-auto p-8 rounded-lg bg-transparent shadow-md">
-            <h2 className="text-3xl font-bold text-center mb-6">Meet Our Team</h2>
+            <h2 className="text-3xl font-bold text-center mb-6" data-aos="fade-up">Meet Our Team</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {TEAM.map((member, index) => (
-                    <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-lg transition duration-300 group" key={index}>
+                    <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-lg transition duration-300 group" key={index} data-aos="zoom-in">
                         <div className="relative w-40 h-40 mx-auto mt-4 rounded-full overflow-hidden border-2 border-transparent shadow-lg transition duration-300 group-hover:border-purple-700 group-hover:shadow-xl group-hover:shadow-purple-500 flex items-center justify-center">
                             <Image
                                 src={member.memberPic}

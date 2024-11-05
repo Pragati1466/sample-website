@@ -2,6 +2,7 @@ import Navbar from '@/sections/Header';
 import Footer from '@/sections/Footer';
 
 const IeeeWeek24 = () => {
+    
     return (
         <div id='ieeeWeek24'>
             <Navbar />

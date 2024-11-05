@@ -6,12 +6,20 @@ import { EVENTS } from '../constants';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Events: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Duration of animations
+      once: true, // Whether animation should happen only once
+    });
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -61,12 +69,12 @@ const Events: React.FC = () => {
   return (
     <section id="past-events" className="relative flex flex-col items-center justify-center min-h-screen text-white overflow-hidden py-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(112,66,248,0.1)_0%,transparent_70%)] opacity-10"></div>
-      <h2 className="text-3xl font-bold mb-12 text-white z-10">Our Past Events</h2>
+      <h2 className="text-3xl font-bold mb-12 text-white z-10" data-aos="fade-up">Our Past Events</h2>
       <div className="w-full max-w-6xl px-4 z-10">
         <div className="relative border border-white/10 rounded-2xl p-8 bg-[#0a0016]/10 backdrop-blur-sm mb-16">
           <Slider {...settings} className="events-slider">
             {EVENTS.map((event, index) => (
-              <div key={index} className="px-4">
+              <div key={index} className="px-4" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
                 <div className="rounded-lg p-6 bg-[#000000] shadow-[0_0_10px_rgba(112,66,248,0.3),0_0_20px_rgba(149,99,255,0.2)]">
                   {isMobile ? (
                     <Slider {...imageSliderSettings} className="mb-6">

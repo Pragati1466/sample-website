@@ -1,0 +1,55 @@
+@keyframes slide-up-fade {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-slide-up-fade {
+  animation: slide-up-fade 0.6s ease-out forwards;
+}
+@keyframes fadeUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start slightly lower */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s forwards; /* Adjust duration as needed */
+}
+/* 1.css */
+
+@keyframes fade-up {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+.fade-up {
+  opacity: 0; /* Start hidden */
+  animation: fade-up 0.5s forwards; /* Animation properties */
+}
+
+/* You can also create a class for a different animation if needed */
+.hover-effect {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+}
+
